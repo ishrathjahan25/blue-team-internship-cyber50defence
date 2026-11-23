@@ -1,1 +1,1 @@
-# -blue-team-internship-cyber50defence
+# blue-team-internship-cyber50defence

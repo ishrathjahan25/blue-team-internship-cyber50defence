@@ -1,0 +1,493 @@
+{
+	"name": "Akira (G1024) - Ishrath Jahan",
+	"versions": {
+		"attack": "18",
+		"navigator": "5.3.2",
+		"layer": "4.5"
+	},
+	"domain": "enterprise-attack",
+	"description": "Challenge 5 Akira profile: 25 unique techniques across 12 selected tactic phases. Matches the delivered TTP mapping using ATT&CK Enterprise v18. Colours represent qualitative confidence in source support, not severity or frequency. Compiled 2 November 2026. Behaviours span different reports/incidents and do not describe one universal attack chain. This layer was generated as JSON, not exported or visually tested in the Navigator UI.",
+	"filters": {
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS",
+			"Network Devices",
+			"ESXi",
+			"PRE",
+			"Containers",
+			"IaaS",
+			"Office Suite",
+			"SaaS",
+			"Identity Provider"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false,
+		"expandedSubtechniques": "none"
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"color": "#2e7d32",
+			"comment": "Valid Accounts - Uses valid VPN or other account credentials for initial access. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "initial-access",
+			"color": "#2e7d32",
+			"comment": "External Remote Services — Uses compromised VPN accounts and remote access services. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1190",
+			"tactic": "initial-access",
+			"color": "#2e7d32",
+			"comment": "Exploit Public-Facing Application — Reported exploitation of internet-facing services; individual CVE and case attribution remain source-specific. Sources: S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S3: https://blog.talosintelligence.com/akira-ransomware-continues-to-evolve/; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.001",
+			"tactic": "execution",
+			"color": "#2e7d32",
+			"comment": "PowerShell - PowerShell used for credential harvesting, privilege escalation and deleting shadow copies. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S3: https://blog.talosintelligence.com/akira-ransomware-continues-to-evolve/",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.003",
+			"tactic": "execution",
+			"color": "#2e7d32",
+			"comment": "Windows Command Shell - Uses cmd.exe, batch scripts and net commands. Sources: S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1136.002",
+			"tactic": "persistence",
+			"color": "#81c784",
+			"comment": "Domain Account - Creates domain accounts for persistence; administrative username itadm reported in some incidents. Sources: S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "Medium-High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1003.001",
+			"tactic": "credential-access",
+			"color": "#2e7d32",
+			"comment": "LSASS Memory - Credential extraction from LSASS, including comsvcs.dll MiniDump activity in Sophos reporting. Sources: S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1003.003",
+			"tactic": "credential-access",
+			"color": "#2e7d32",
+			"comment": "NTDS - Copies NTDS.dit and SYSTEM hive from domain controllers. Sources: S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1558",
+			"tactic": "credential-access",
+			"color": "#81c784",
+			"comment": "Steal or Forge Kerberos Tickets — Scripts used to obtain Kerberos authentication material; do not infer every ticket-forging method. Sources: S1: https://attack.mitre.org/groups/G1024/; S3: https://blog.talosintelligence.com/akira-ransomware-continues-to-evolve/",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "Medium-High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"color": "#81c784",
+			"comment": "Exploitation for Privilege Escalation - Reported Veeam exploitation and vulnerable-driver activity; paths vary by incident. Sources: S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S3: https://blog.talosintelligence.com/akira-ransomware-continues-to-evolve/",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "Medium-High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1562.001",
+			"tactic": "defense-evasion",
+			"color": "#2e7d32",
+			"comment": "Disable or Modify Tools - Disables or uninstalls security tools. ATT&CK v18 identifier retained to match the workbook; v20 cross-reference T1685. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1036.005",
+			"tactic": "defense-evasion",
+			"color": "#ffca28",
+			"comment": "Match Legitimate Resource Name or Location - Uses legitimate-looking file names and locations. Sources: S1: https://attack.mitre.org/groups/G1024/; S3: https://blog.talosintelligence.com/akira-ransomware-continues-to-evolve/",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "Medium"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1021.001",
+			"tactic": "lateral-movement",
+			"color": "#2e7d32",
+			"comment": "Remote Desktop Protocol - RDP used for movement between victim systems. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1482",
+			"tactic": "discovery",
+			"color": "#2e7d32",
+			"comment": "Domain Trust Discovery - Enumerates trust relationships using nltest or AdFind. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"color": "#2e7d32",
+			"comment": "Remote System Discovery - Finds domain controllers and hosts using network discovery tools. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1560.001",
+			"tactic": "collection",
+			"color": "#2e7d32",
+			"comment": "Archive via Utility - Uses WinRAR to archive data before exfiltration. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1213.002",
+			"tactic": "collection",
+			"color": "#ffca28",
+			"comment": "SharePoint - MITRE records access to and download of SharePoint data. Sources: S1: https://attack.mitre.org/groups/G1024/",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "Medium"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1219",
+			"tactic": "command-and-control",
+			"color": "#2e7d32",
+			"comment": "Remote Access Tools - Uses legitimate remote access tools including AnyDesk and LogMeIn. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking; S6: https://www.s-rminform.com/latest-thinking/camera-off-akira-deploys-ransomware-via-webcam",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1572",
+			"tactic": "command-and-control",
+			"color": "#81c784",
+			"comment": "Protocol Tunneling - CISA reports tunnelling tools including Ngrok. Sources: S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "Medium-High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1567.002",
+			"tactic": "exfiltration",
+			"color": "#2e7d32",
+			"comment": "Exfiltration to Cloud Storage - Rclone and cloud destinations including Mega are reported. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1048",
+			"tactic": "exfiltration",
+			"color": "#2e7d32",
+			"comment": "Exfiltration Over Alternative Protocol - Reported transfers through WinSCP, FileZilla and PuTTY/PSCP; protocols vary. Sources: S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1486",
+			"tactic": "impact",
+			"color": "#2e7d32",
+			"comment": "Data Encrypted for Impact - Encrypts victim data across Windows and virtualisation platforms. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S3: https://blog.talosintelligence.com/akira-ransomware-continues-to-evolve/",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1490",
+			"tactic": "impact",
+			"color": "#2e7d32",
+			"comment": "Inhibit System Recovery - Deletes Volume Shadow Copies using PowerShell/WMI commands. Sources: S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a; S3: https://blog.talosintelligence.com/akira-ransomware-continues-to-evolve/; S4: https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1531",
+			"tactic": "impact",
+			"color": "#ffca28",
+			"comment": "Account Access Removal - MITRE records deletion of administrator accounts before encryption. Sources: S1: https://attack.mitre.org/groups/G1024/",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "Medium"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1657",
+			"tactic": "impact",
+			"color": "#2e7d32",
+			"comment": "Financial Theft - Ransom and extortion activity, retained from the submitted TTP mapping. Sources: S1: https://attack.mitre.org/groups/G1024/; S2: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a",
+			"enabled": true,
+			"metadata": [
+				{
+					"name": "Confidence",
+					"value": "High"
+				}
+			],
+			"links": [],
+			"showSubtechniques": true
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ff6666ff",
+			"#ffe766ff",
+			"#8ec843ff"
+		],
+		"minValue": 0,
+		"maxValue": 100
+	},
+	"legendItems": [
+		{
+			"color": "#2e7d32",
+			"label": "High source-support confidence"
+		},
+		{
+			"color": "#81c784",
+			"label": "Medium-High source-support confidence"
+		},
+		{
+			"color": "#ffca28",
+			"label": "Medium source-support confidence"
+		}
+	],
+	"metadata": [
+		{
+			"name": "Analyst",
+			"value": "Ishrath Jahan"
+		},
+		{
+			"name": "Actor",
+			"value": "Akira / G1024"
+		},
+		{
+			"name": "Unique techniques",
+			"value": "25"
+		},
+		{
+			"name": "Distinct selected tactics",
+			"value": "12"
+		},
+		{
+			"name": "ATT&CK version basis",
+			"value": "v18 to match workbook; newer v20 identifiers are not mixed into techniqueID fields."
+		},
+		{
+			"name": "Validation status",
+			"value": "JSON syntax and structural checks passed; Navigator UI import/export pending."
+		}
+	],
+	"links": [
+		{
+			"label": "S1",
+			"url": "https://attack.mitre.org/groups/G1024/"
+		},
+		{
+			"label": "S2",
+			"url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a"
+		},
+		{
+			"label": "S3",
+			"url": "https://blog.talosintelligence.com/akira-ransomware-continues-to-evolve/"
+		},
+		{
+			"label": "S4",
+			"url": "https://www.sophos.com/en-us/blog/akira-again-the-ransomware-that-keeps-on-taking"
+		},
+		{
+			"label": "S5",
+			"url": "https://arcticwolf.com/resources/blog/conti-and-akira-chained-together/"
+		},
+		{
+			"label": "S6",
+			"url": "https://www.s-rminform.com/latest-thinking/camera-off-akira-deploys-ransomware-via-webcam"
+		}
+	],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false,
+	"selectVisibleTechniques": false
+}
